@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://acquamotor.com.br/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://acquamotor.com.br/logo.png</image:loc>
+      <image:title>Acquamotor</image:title>
+      <image:caption>Acquamotor — motobombas Syllent e manutenção de piscinas em Itapema</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://acquamotor.com.br/foto3.jpg</image:loc>
+      <image:caption>Diagnóstico de motobomba de piscina em Itapema</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://acquamotor.com.br/foto4.jpeg</image:loc>
+      <image:caption>Troca de motobomba de piscina em Balneário Camboriú</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://acquamotor.com.br/foto5.jpeg</image:loc>
+      <image:caption>Manutenção preventiva de piscina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://acquamotor.com.br/foto6.jpg</image:loc>
+      <image:caption>Atendimento a condomínios e clubes</image:caption>
+    </image:image>
+  </url>
+</urlset>

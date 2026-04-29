@@ -1,0 +1,406 @@
+/* ============================================
+   ACQUAMOTOR — CSS Isolado para /acquamotor-home/
+
+   SEGURO: Todo seletor começa com .page-acquamotor-home
+   Isso garante que NÃO afeta o site forthemp.com.br
+
+   Como aplicar:
+   WordPress > Aparência > Personalizar > CSS Adicional
+   ============================================ */
+
+/* --- VARIÁVEIS (escopo local via cascade) --- */
+.page-acquamotor-home {
+  --am-navy:       #1C2B3A;
+  --am-navy-light: #243447;
+  --am-teal:       #4BBFAD;
+  --am-teal-dark:  #2A9D8F;
+  --am-teal-light: #7DD4C9;
+  --am-teal-bg:    #EBF8F6;
+  --am-white:      #FFFFFF;
+  --am-text:       #1C2B3A;
+  --am-text-light: #5A7184;
+  --am-border:     #D1EAE7;
+  --am-radius:     12px;
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+.page-acquamotor-home h1,
+.page-acquamotor-home h2,
+.page-acquamotor-home h3,
+.page-acquamotor-home h4 {
+  color: var(--am-navy) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.page-acquamotor-home h1 strong,
+.page-acquamotor-home h2 strong,
+.page-acquamotor-home h3 strong {
+  color: var(--am-teal) !important;
+}
+
+.page-acquamotor-home p,
+.page-acquamotor-home li {
+  color: var(--am-text-light) !important;
+  line-height: 1.7;
+}
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.page-acquamotor-home header,
+.page-acquamotor-home .site-header,
+.page-acquamotor-home #masthead {
+  background: var(--am-navy) !important;
+  border-bottom: 3px solid var(--am-teal) !important;
+}
+
+.page-acquamotor-home header a,
+.page-acquamotor-home nav a,
+.page-acquamotor-home .menu-item a {
+  color: var(--am-white) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.page-acquamotor-home header a:hover,
+.page-acquamotor-home nav a:hover {
+  color: var(--am-teal-light) !important;
+}
+
+/* ============================================
+   HERO — fundo navy com acento teal
+   ============================================ */
+.page-acquamotor-home .elementor-section:first-of-type,
+.page-acquamotor-home section.hero,
+.page-acquamotor-home [class*="hero"] {
+  background: linear-gradient(135deg, var(--am-navy) 0%, #1a3d4f 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Detalhe decorativo no hero */
+.page-acquamotor-home [class*="hero"]::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(75,191,173,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-acquamotor-home [class*="hero"] h1,
+.page-acquamotor-home [class*="hero"] h2,
+.page-acquamotor-home .elementor-section:first-of-type h1,
+.page-acquamotor-home .elementor-section:first-of-type h2 {
+  color: var(--am-white) !important;
+}
+
+.page-acquamotor-home [class*="hero"] p,
+.page-acquamotor-home .elementor-section:first-of-type p {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* Stats badges no hero */
+.page-acquamotor-home .elementor-icon-box-wrapper {
+  background: rgba(75,191,173,0.10) !important;
+  border: 1px solid rgba(75,191,173,0.28) !important;
+  border-radius: var(--am-radius) !important;
+  padding: 18px 20px !important;
+  transition: background 0.2s;
+}
+
+.page-acquamotor-home .elementor-icon-box-wrapper:hover {
+  background: rgba(75,191,173,0.18) !important;
+}
+
+/* ============================================
+   BOTÕES CTA PRINCIPAIS
+   ============================================ */
+.page-acquamotor-home a.elementor-button,
+.page-acquamotor-home .elementor-button,
+.page-acquamotor-home .wp-block-button a {
+  background: linear-gradient(135deg, var(--am-teal) 0%, var(--am-teal-dark) 100%) !important;
+  color: var(--am-white) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 32px !important;
+  box-shadow: 0 4px 18px rgba(42,157,143,0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.page-acquamotor-home a.elementor-button:hover,
+.page-acquamotor-home .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 28px rgba(42,157,143,0.50) !important;
+}
+
+/* Botão WhatsApp — verde mas com peso visual correto */
+.page-acquamotor-home a[href*="whatsapp"],
+.page-acquamotor-home a[href*="wa.me"] {
+  background: linear-gradient(135deg, #25D366 0%, #1DAA54 100%) !important;
+  color: var(--am-white) !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.30) !important;
+  transition: all 0.25s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+.page-acquamotor-home a[href*="whatsapp"]:hover,
+.page-acquamotor-home a[href*="wa.me"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.45) !important;
+}
+
+/* ============================================
+   SEÇÕES ALTERNADAS (zebra de marca)
+   ============================================ */
+.page-acquamotor-home .elementor-section:nth-child(even) {
+  background-color: var(--am-teal-bg) !important;
+}
+
+.page-acquamotor-home .elementor-section:nth-child(odd) {
+  background-color: var(--am-white) !important;
+}
+
+/* ============================================
+   TÍTULOS DE SEÇÃO — Underline teal
+   ============================================ */
+.page-acquamotor-home .elementor-widget-heading h2 {
+  position: relative;
+  padding-bottom: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+.page-acquamotor-home .elementor-widget-heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 52px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--am-teal), var(--am-teal-light));
+  border-radius: 2px;
+}
+
+.page-acquamotor-home .elementor-widget-text-align-center .elementor-widget-heading h2::after,
+.page-acquamotor-home .elementor-align-center h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ============================================
+   CARDS DE SERVIÇO
+   ============================================ */
+.page-acquamotor-home .elementor-widget-icon-box .elementor-icon-box-wrapper {
+  background: var(--am-white) !important;
+  border: 1px solid var(--am-border) !important;
+  border-radius: var(--am-radius) !important;
+  border-top: 4px solid var(--am-teal) !important;
+  box-shadow: 0 4px 24px rgba(28,43,58,0.08) !important;
+  padding: 28px 22px !important;
+  transition: all 0.25s ease !important;
+}
+
+.page-acquamotor-home .elementor-widget-icon-box .elementor-icon-box-wrapper:hover {
+  box-shadow: 0 8px 32px rgba(75,191,173,0.22) !important;
+  transform: translateY(-4px) !important;
+  border-top-color: var(--am-teal-dark) !important;
+}
+
+/* Ícones dos cards */
+.page-acquamotor-home .elementor-widget-icon-box .elementor-icon i,
+.page-acquamotor-home .elementor-widget-icon-box .elementor-icon svg {
+  color: var(--am-teal) !important;
+  fill: var(--am-teal) !important;
+}
+
+/* Título dentro do card */
+.page-acquamotor-home .elementor-icon-box-title {
+  color: var(--am-navy) !important;
+  font-weight: 700 !important;
+}
+
+/* Descrição dentro do card */
+.page-acquamotor-home .elementor-icon-box-description {
+  color: var(--am-text-light) !important;
+}
+
+/* ============================================
+   SEÇÃO COMO FUNCIONA — Steps
+   ============================================ */
+.page-acquamotor-home .elementor-widget-number-counter .elementor-counter-number-wrapper,
+.page-acquamotor-home [class*="step-number"] {
+  color: var(--am-teal) !important;
+  font-weight: 800 !important;
+  font-size: 2.5rem !important;
+}
+
+/* Numeração estilizada */
+.page-acquamotor-home .elementor-counter-number {
+  color: var(--am-teal) !important;
+}
+
+/* ============================================
+   SEÇÃO DE AVALIAÇÕES
+   ============================================ */
+.page-acquamotor-home .elementor-testimonial-wrapper,
+.page-acquamotor-home [class*="review-card"],
+.page-acquamotor-home [class*="testimonial"] {
+  background: var(--am-navy) !important;
+  border-radius: var(--am-radius) !important;
+  border-left: 4px solid var(--am-teal) !important;
+  padding: 24px !important;
+}
+
+.page-acquamotor-home .elementor-testimonial-wrapper *,
+.page-acquamotor-home [class*="review-card"] * {
+  color: rgba(255,255,255,0.90) !important;
+}
+
+/* Estrelas */
+.page-acquamotor-home [class*="star"],
+.page-acquamotor-home .star-rating {
+  color: #F5C518 !important;
+}
+
+/* ============================================
+   SEÇÃO QUEM SOMOS — Fundo navy
+   ============================================ */
+.page-acquamotor-home [class*="about"],
+.page-acquamotor-home [class*="quem-somos"] {
+  background: var(--am-navy) !important;
+}
+
+.page-acquamotor-home [class*="about"] h2,
+.page-acquamotor-home [class*="about"] h3 {
+  color: var(--am-teal-light) !important;
+}
+
+.page-acquamotor-home [class*="about"] p {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* Diferenciais */
+.page-acquamotor-home [class*="diferencial"],
+.page-acquamotor-home [class*="feature-item"] {
+  border-left: 4px solid var(--am-teal) !important;
+  padding-left: 16px !important;
+}
+
+/* ============================================
+   FAQ — Acordeão
+   ============================================ */
+.page-acquamotor-home .elementor-accordion-item {
+  border: 1px solid var(--am-border) !important;
+  border-radius: var(--am-radius) !important;
+  margin-bottom: 8px !important;
+  overflow: hidden;
+}
+
+.page-acquamotor-home .elementor-tab-title {
+  background: var(--am-white) !important;
+  color: var(--am-navy) !important;
+  font-weight: 600 !important;
+  padding: 18px 20px !important;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-acquamotor-home .elementor-tab-title:hover,
+.page-acquamotor-home .elementor-tab-title.elementor-active {
+  background: var(--am-teal-bg) !important;
+  color: var(--am-teal-dark) !important;
+}
+
+.page-acquamotor-home .elementor-accordion-icon {
+  color: var(--am-teal) !important;
+}
+
+.page-acquamotor-home .elementor-tab-content {
+  border-top: 1px solid var(--am-border) !important;
+  padding: 16px 20px !important;
+  background: var(--am-white) !important;
+}
+
+/* ============================================
+   CIDADES / ÁREA DE ATENDIMENTO
+   ============================================ */
+.page-acquamotor-home [class*="cidade"],
+.page-acquamotor-home [class*="city"] {
+  background: var(--am-teal-bg) !important;
+  border: 1px solid var(--am-border) !important;
+  border-radius: var(--am-radius) !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  color: var(--am-navy) !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.page-acquamotor-home footer,
+.page-acquamotor-home .site-footer {
+  background: var(--am-navy) !important;
+  border-top: 3px solid var(--am-teal) !important;
+}
+
+.page-acquamotor-home footer *,
+.page-acquamotor-home .site-footer * {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+.page-acquamotor-home footer a:hover,
+.page-acquamotor-home .site-footer a:hover {
+  color: var(--am-teal-light) !important;
+}
+
+/* ============================================
+   ÍCONES SOCIAIS
+   ============================================ */
+.page-acquamotor-home .elementor-social-icons-wrapper a {
+  background: rgba(75,191,173,0.12) !important;
+  border: 1px solid rgba(75,191,173,0.28) !important;
+  border-radius: 50% !important;
+  transition: all 0.25s !important;
+}
+
+.page-acquamotor-home .elementor-social-icons-wrapper a:hover {
+  background: var(--am-teal) !important;
+  border-color: var(--am-teal) !important;
+  transform: scale(1.1) !important;
+}
+
+/* ============================================
+   DIVIDER DECORATIVO
+   ============================================ */
+.page-acquamotor-home .elementor-divider-separator {
+  border-color: var(--am-border) !important;
+}
+
+/* ============================================
+   RESPONSIVIDADE MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .page-acquamotor-home h1 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+  }
+  .page-acquamotor-home h2 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem) !important;
+  }
+  .page-acquamotor-home a.elementor-button,
+  .page-acquamotor-home .elementor-button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}

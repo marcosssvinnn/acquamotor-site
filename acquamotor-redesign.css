@@ -1,0 +1,454 @@
+/* ============================================
+   ACQUAMOTOR — Redesign CSS
+   Paleta extraída da logo oficial
+   Cole em: WordPress > Aparência > CSS Adicional
+   ============================================ */
+
+/* --- VARIÁVEIS DE MARCA --- */
+:root {
+  --am-navy:       #1C2B3A;   /* Engrenagem — fundo escuro, texto forte */
+  --am-navy-light: #243447;   /* Navy mais suave para cards escuros */
+  --am-teal:       #4BBFAD;   /* Teal principal — CTA, destaques */
+  --am-teal-dark:  #2A9D8F;   /* Teal escuro — hover, gradiente */
+  --am-teal-light: #7DD4C9;   /* Teal claro — ícones, badges */
+  --am-teal-bg:    #EBF8F6;   /* Teal quase branco — fundos alternados */
+  --am-white:      #FFFFFF;
+  --am-text:       #1C2B3A;   /* Texto corpo = navy para coerência */
+  --am-text-light: #5A7184;   /* Texto secundário */
+  --am-border:     #D1EAE7;   /* Bordas suaves */
+  --am-radius:     12px;
+  --am-shadow:     0 4px 24px rgba(28,43,58,0.10);
+  --am-shadow-hover: 0 8px 32px rgba(75,191,173,0.22);
+}
+
+/* ============================================
+   TIPOGRAFIA BASE
+   ============================================ */
+body {
+  color: var(--am-text) !important;
+  font-family: 'Inter', 'Poppins', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--am-navy) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Palavra em destaque nos títulos (ex: "MOTOR" em ACQUAMOTOR) */
+h1 strong, h2 strong, h3 strong {
+  color: var(--am-teal) !important;
+}
+
+/* ============================================
+   HEADER / NAVEGAÇÃO
+   ============================================ */
+header,
+.site-header,
+.elementor-section.header-section,
+nav {
+  background: var(--am-navy) !important;
+  border-bottom: 3px solid var(--am-teal) !important;
+}
+
+/* Links do menu */
+header a,
+nav a,
+.menu-item a {
+  color: var(--am-white) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+header a:hover,
+nav a:hover,
+.menu-item a:hover {
+  color: var(--am-teal-light) !important;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.elementor-section:first-of-type,
+section.hero,
+.hero-section {
+  background: linear-gradient(135deg, var(--am-navy) 0%, var(--am-navy-light) 60%, #1a3d4f 100%) !important;
+}
+
+/* Título hero */
+.elementor-section:first-of-type h1,
+.elementor-section:first-of-type h2,
+section.hero h1,
+section.hero h2 {
+  color: var(--am-white) !important;
+}
+
+/* Subtítulo hero */
+.elementor-section:first-of-type p,
+section.hero p {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+/* Badge de stats no hero (ex: +500 serviços, 90 dias) */
+.elementor-icon-box-wrapper,
+.stat-badge,
+[class*="icon-box"] {
+  background: rgba(75,191,173,0.12) !important;
+  border: 1px solid rgba(75,191,173,0.30) !important;
+  border-radius: var(--am-radius);
+  padding: 16px 20px !important;
+}
+
+/* ============================================
+   BOTÕES — CTA PRINCIPAL
+   ============================================ */
+a.elementor-button,
+.elementor-button-wrapper a,
+.wp-block-button a,
+button[class*="btn"],
+a[class*="btn"],
+.elementor-button {
+  background: linear-gradient(135deg, var(--am-teal) 0%, var(--am-teal-dark) 100%) !important;
+  color: var(--am-white) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 14px 32px !important;
+  box-shadow: 0 4px 16px rgba(42,157,143,0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+a.elementor-button:hover,
+.elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 28px rgba(42,157,143,0.50) !important;
+  background: linear-gradient(135deg, var(--am-teal-light) 0%, var(--am-teal) 100%) !important;
+}
+
+/* Botão WhatsApp — mantém identidade mas com toque da marca */
+a[href*="whatsapp"],
+a[href*="wa.me"],
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #1DAA54 100%) !important;
+  color: var(--am-white) !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.30) !important;
+  transition: all 0.25s ease !important;
+}
+
+a[href*="whatsapp"]:hover,
+a[href*="wa.me"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.45) !important;
+}
+
+/* ============================================
+   SEÇÕES ALTERNADAS (zebra de marca)
+   ============================================ */
+
+/* Seções claras — fundo teal suave */
+.elementor-section:nth-child(even),
+section:nth-child(even) {
+  background-color: var(--am-teal-bg) !important;
+}
+
+/* Seções brancas */
+.elementor-section:nth-child(odd),
+section:nth-child(odd) {
+  background-color: var(--am-white) !important;
+}
+
+/* ============================================
+   CARDS DE SERVIÇO
+   ============================================ */
+.elementor-widget-icon-box,
+.elementor-icon-box-wrapper,
+[class*="service-card"],
+[class*="card"] {
+  background: var(--am-white) !important;
+  border: 1px solid var(--am-border) !important;
+  border-radius: var(--am-radius) !important;
+  box-shadow: var(--am-shadow) !important;
+  padding: 28px 24px !important;
+  transition: all 0.25s ease !important;
+  border-top: 4px solid var(--am-teal) !important;
+}
+
+[class*="card"]:hover,
+.elementor-icon-box-wrapper:hover {
+  box-shadow: var(--am-shadow-hover) !important;
+  transform: translateY(-4px) !important;
+  border-top-color: var(--am-teal-dark) !important;
+}
+
+/* Ícones dos cards */
+.elementor-icon,
+.elementor-icon-box-icon i,
+[class*="icon"] {
+  color: var(--am-teal) !important;
+}
+
+/* ============================================
+   SEÇÃO "COMO FUNCIONA" — Steps numerados
+   ============================================ */
+[class*="step"],
+[class*="process"] {
+  counter-reset: steps;
+}
+
+/* Números dos steps */
+[class*="step-number"],
+[class*="step"] .elementor-heading-title::before,
+.elementor-number {
+  background: var(--am-teal) !important;
+  color: var(--am-white) !important;
+  border-radius: 50% !important;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+/* Linha conectora entre steps */
+[class*="step"]::after {
+  background: var(--am-border) !important;
+}
+
+/* ============================================
+   SEÇÃO DE AVALIAÇÕES / DEPOIMENTOS
+   ============================================ */
+[class*="review"],
+[class*="testimonial"],
+.elementor-testimonial-wrapper {
+  background: var(--am-navy) !important;
+  border-radius: var(--am-radius) !important;
+  padding: 24px !important;
+}
+
+[class*="review"] *,
+[class*="testimonial"] *,
+.elementor-testimonial-wrapper * {
+  color: var(--am-white) !important;
+}
+
+/* Estrelas */
+[class*="star"],
+.star-rating {
+  color: #F5C518 !important; /* Dourado para estrelas */
+}
+
+/* ============================================
+   SEÇÃO "QUEM SOMOS" — Fundo escuro de marca
+   ============================================ */
+[class*="about"],
+[class*="quem-somos"],
+.about-section {
+  background: var(--am-navy) !important;
+}
+
+[class*="about"] h2,
+[class*="about"] h3,
+[class*="quem-somos"] h2 {
+  color: var(--am-teal-light) !important;
+}
+
+[class*="about"] p,
+[class*="quem-somos"] p {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* Diferenciais (4 boxes) */
+[class*="diferencial"],
+[class*="feature-item"] {
+  border-left: 4px solid var(--am-teal) !important;
+  padding-left: 16px !important;
+}
+
+/* ============================================
+   SEÇÃO FAQ
+   ============================================ */
+.elementor-accordion-item,
+[class*="faq-item"],
+details {
+  border: 1px solid var(--am-border) !important;
+  border-radius: var(--am-radius) !important;
+  margin-bottom: 8px !important;
+  overflow: hidden;
+}
+
+.elementor-tab-title,
+[class*="faq"] summary,
+[class*="accordion-title"] {
+  background: var(--am-white) !important;
+  color: var(--am-navy) !important;
+  font-weight: 600 !important;
+  padding: 18px 20px !important;
+  border-bottom: 1px solid var(--am-border);
+}
+
+.elementor-tab-title.elementor-active,
+[class*="faq"] summary:hover {
+  background: var(--am-teal-bg) !important;
+  color: var(--am-teal-dark) !important;
+}
+
+/* Seta do accordion */
+.elementor-accordion-icon,
+[class*="accordion-icon"] {
+  color: var(--am-teal) !important;
+}
+
+/* ============================================
+   SEPARADORES / DIVIDERS
+   ============================================ */
+.elementor-divider-separator,
+hr {
+  border-color: var(--am-border) !important;
+}
+
+/* Divider decorativo com cor de marca */
+[class*="section-divider"] {
+  background: linear-gradient(90deg, transparent, var(--am-teal), transparent) !important;
+  height: 3px !important;
+  border: none !important;
+}
+
+/* ============================================
+   TÍTULOS DE SEÇÃO — Padrão visual consistente
+   ============================================ */
+.section-title,
+[class*="section"] > h2:first-child,
+.elementor-widget-heading h2 {
+  position: relative;
+  padding-bottom: 16px !important;
+}
+
+/* Underline decorativo nos títulos de seção */
+.elementor-widget-heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--am-teal), var(--am-teal-light));
+  border-radius: 2px;
+}
+
+/* Centralizado */
+.elementor-widget-heading.elementor-widget-text-align-center h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ============================================
+   ÁREA DE ATENDIMENTO / CIDADES
+   ============================================ */
+[class*="cidade"],
+[class*="city"],
+[class*="area"] {
+  background: var(--am-teal-bg) !important;
+  border-radius: var(--am-radius) !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  color: var(--am-navy) !important;
+  border: 1px solid var(--am-border) !important;
+  display: inline-block;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer,
+.site-footer,
+.elementor-location-footer {
+  background: var(--am-navy) !important;
+  border-top: 3px solid var(--am-teal) !important;
+}
+
+footer *,
+.site-footer * {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+footer a:hover,
+.site-footer a:hover {
+  color: var(--am-teal-light) !important;
+}
+
+/* CNPJ / info legal */
+footer small,
+.footer-legal {
+  color: rgba(255,255,255,0.45) !important;
+  font-size: 0.78rem;
+}
+
+/* ============================================
+   ÍCONES SOCIAIS (Instagram, YouTube, WhatsApp)
+   ============================================ */
+.elementor-social-icons-wrapper a,
+[class*="social"] a {
+  background: rgba(75,191,173,0.15) !important;
+  border: 1px solid rgba(75,191,173,0.30) !important;
+  border-radius: 50% !important;
+  transition: all 0.25s !important;
+}
+
+.elementor-social-icons-wrapper a:hover,
+[class*="social"] a:hover {
+  background: var(--am-teal) !important;
+  border-color: var(--am-teal) !important;
+  transform: scale(1.1) !important;
+}
+
+/* ============================================
+   BADGE / SELO (garantia 90 dias, etc.)
+   ============================================ */
+[class*="badge"],
+[class*="selo"],
+[class*="garantia"] {
+  background: linear-gradient(135deg, var(--am-teal) 0%, var(--am-teal-dark) 100%) !important;
+  color: var(--am-white) !important;
+  border-radius: 50px !important;
+  padding: 6px 16px !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ============================================
+   RESPONSIVIDADE — MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  h1 { font-size: clamp(1.6rem, 5vw, 2.4rem) !important; }
+  h2 { font-size: clamp(1.3rem, 4vw, 1.9rem) !important; }
+
+  a.elementor-button,
+  .elementor-button {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 16px 24px !important;
+  }
+
+  [class*="card"] {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADA (desktop)
+   ============================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--am-navy); }
+::-webkit-scrollbar-thumb {
+  background: var(--am-teal);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--am-teal-dark); }
