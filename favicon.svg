@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Gear body -->
+  <g transform="translate(50,50)">
+    <!-- Gear teeth -->
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(30)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(60)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(90)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(120)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(150)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(180)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(210)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(240)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(270)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(300)"/>
+    <rect x="-7" y="-46" width="14" height="12" rx="2" fill="#1A2E37" transform="rotate(330)"/>
+    <!-- Gear circle -->
+    <circle r="37" fill="#1A2E37"/>
+    <!-- White ring separating gear from drop -->
+    <circle r="31" fill="white"/>
+    <!-- Water drop -->
+    <defs>
+      <linearGradient id="dropFav" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#3DB6BC"/>
+        <stop offset="100%" stop-color="#1B7A82"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,-22 C10,-6 22,4 22,14 C22,24 12,31 0,31 C-12,31 -22,24 -22,14 C-22,4 -10,-6 0,-22 Z"
+          fill="url(#dropFav)"/>
+    <!-- Shine on drop -->
+    <ellipse cx="-7" cy="4" rx="5" ry="9" fill="white" opacity="0.35"/>
+  </g>
+</svg>
