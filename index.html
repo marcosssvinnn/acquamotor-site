@@ -1034,37 +1034,33 @@
   .steps-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: 14px;
     position: relative;
-    padding-top: 16px;
   }
-  .steps-row::before {
-    content: "";
-    position: absolute;
-    top: 52px; left: 12.5%; right: 12.5%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-dark) 100%);
-    z-index: 0;
-  }
+  .steps-row::before { display: none; }
   .step-item {
-    text-align: center;
-    padding: 0 16px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-top: 3px solid var(--teal);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+    text-align: left;
     position: relative;
-    z-index: 1;
+    transition: box-shadow .25s;
   }
+  .step-item:hover { box-shadow: var(--shadow-md); }
   .step-num {
-    width: 72px; height: 72px;
+    width: 34px; height: 34px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
-    color: var(--white);
-    font-size: 22px;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    font-size: 13px;
     font-weight: 800;
     display: grid; place-items: center;
-    margin: 0 auto 20px;
-    box-shadow: 0 8px 20px rgba(43,152,158,0.3);
+    margin: 0 0 14px;
   }
-  .step-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
-  .step-text { font-size: 14px; color: var(--gray); line-height: 1.6; }
+  .step-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+  .step-text { font-size: 13px; color: var(--gray); line-height: 1.6; }
 
   /* ====== PLANO PREVENTIVO ====== */
   .preventivo-section {
@@ -1761,8 +1757,7 @@
       box-shadow: var(--shadow-md);
     }
     .sintomas-grid { grid-template-columns: 1fr 1fr; }
-    .steps-row { grid-template-columns: 1fr 1fr; gap: 36px; }
-    .steps-row::before { display: none; }
+    .steps-row { grid-template-columns: 1fr 1fr; gap: 12px; }
     .preventivo-inner { grid-template-columns: 1fr; gap: 48px; }
   }
   @media (max-width: 520px) {
@@ -1804,25 +1799,12 @@
     .sintoma-card p { display: none; }
     .sintoma-note { font-size: 13px; margin-top: 16px; }
 
-    /* Como Funciona: steps horizontais */
-    .steps-row { grid-template-columns: 1fr; gap: 0; }
-    .steps-row::before { display: none; }
-    .step-item {
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      grid-template-rows: auto auto;
-      column-gap: 14px;
-      text-align: left; padding: 14px 0;
-      border-bottom: 1px solid var(--gray-light);
-    }
-    .step-item:last-child { border-bottom: none; }
-    .step-num {
-      width: 42px; height: 42px;
-      font-size: 15px; margin: 0;
-      grid-row: 1 / 3; align-self: center;
-    }
-    .step-title { font-size: 14px; margin-bottom: 2px; align-self: end; }
-    .step-text { font-size: 13px; align-self: start; }
+    /* Como Funciona: 1 coluna, cards compactos */
+    .steps-row { grid-template-columns: 1fr; gap: 8px; }
+    .step-item { padding: 16px 14px; border-top-width: 3px; }
+    .step-num { width: 28px; height: 28px; font-size: 12px; margin-bottom: 10px; }
+    .step-title { font-size: 14px; margin-bottom: 4px; }
+    .step-text { font-size: 13px; }
 
     /* Serviços: 2 colunas */
     .services-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
