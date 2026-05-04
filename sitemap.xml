@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://acquamotor.com.br/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -28,5 +28,23 @@
       <image:loc>https://acquamotor.com.br/foto6.jpg</image:loc>
       <image:caption>Atendimento a condomínios e clubes</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://acquamotor.com.br/conserto-bomba-piscina-balneario-camboriu/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://acquamotor.com.br/conserto-bomba-piscina-camboriu/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://acquamotor.com.br/conserto-bomba-piscina-porto-belo/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
